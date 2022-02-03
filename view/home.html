@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e8d843acfd.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        *,body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav{
+           width: 100%;
+           height: 6rem;
+           background-color: #F2F2F2;
+            display: flex;
+        }
+        nav div{
+            margin: 1.5rem auto;
+
+        }
+        nav div p{
+            font-size: 2rem;
+            color: #676669;
+            font-family: 'Gowun Batang', serif;
+        }
+
+        .container{
+
+            padding: 1rem 10rem;
+            width: 100%;
+        }
+
+
+        #values p,h1{
+            margin: 10px;
+            text-align: center;
+            width: 100%;
+            font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        }
+        form{
+            text-align: center;
+        }
+        form input{
+            width: 30%;
+            margin: 10px;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px white;
+
+        }
+         input:focus{
+             outline: none;
+             border: 1px solid orange;
+             box-shadow: 2px 2px orange;
+         }
+                @media screen and (max-width: 1000px){
+            form input{
+                width: 100%;
+            }
+            .hidden-text{
+                width: 100%;
+            }
+        }
+
+        .hidden-text{
+            display: none;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .input-button{
+            width: 170px;
+            color: white;
+        }
+        input[type=submit]{
+            background-color: orange;
+        }
+        input[type=reset]{
+            background-color: #a41515;
+            box-shadow: 2px 2px white;
+            border: 1px solid white;
+        }
+        input[type=submit]:hover, input[type=reset]:hover{
+            cursor: pointer;
+        }
+        input[type=submit]:active {
+            box-shadow: 2px 2px orange;
+            border: 1px solid orange;
+        }
+
+        input[type=reset]:active {
+            box-shadow: 2px 2px #a41515;
+            border: 1px solid #a41515;
+        }
+
+        footer {
+            background-color: #F2F2F2;
+            width: 100%;
+            height: 100px
+
+        }
+        footer .container div div{
+            float: left;
+            width: 30%;
+            margin-left: 10px;
+            height: 20px;
+        }
+        #social-media div{
+            margin-left: 0px;
+        }
+        #social-media div a{
+            text-decoration: none;
+            color: black;
+            margin-right: 3px;
+        }
+        #social-media{
+            margin-left: 10px;
+        }
+    </style>
+    <title>Ana sayfa</title>
+</head>
+<body>
+
+
+        <nav>
+            <div>
+                <p>Ne Oyna <i style='color: #676669' class="fas fa-question"></i></p>
+            </div>
+        </nav>
+
+        <main style="padding-top: 20px; background-color: #F0F0E0;">
+                    <div class="container">
+
+                <div id="values">
+                    <h1>OYUN ÖNERİ MOTORU</h1>
+                    <p>Daha önce oynadığınız 3 tane oyun giriniz!</p>
+                    <hr>
+
+                    <!-- Daha sonradan python ile modele bağlayacaz -->
+                    <form class="ui-widget" action="/oneriler" method="post"> <!-- action sayfanın nereye gideceğini belirtir-->
+
+                        <input class="tags" name="game1" type="text" placeholder="Bir başlık yaz">
+                        <div class="hidden-text"></div>
+
+                        <input class="tags" name="game2" type="text" placeholder="Bir başlık yaz">
+                        <div class="hidden-text"></div>
+
+                        <input class="tags" name="game3" type="text" placeholder="Bir başlık yaz">
+                        <div class="hidden-text"></div>
+
+                        <input class="input-button" type="submit">
+                        <input class="input-button" type="reset">
+                    </form>
+
+
+            </div></div>
+
+        </main>
+
+        <div style="height: 1000px">
+            <div class="container">
+
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div>
+                    <div id="who">
+                        <h4>Ne Oyna?</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam, aut dolorum ipsam itaque laboriosam nemo recusandae ullam. Illo, nobis!</p>
+                    </div>
+                    <div id="social-media">
+                        <h4>Sosyal Medya</h4>
+                        <div>
+                            <a href="https://durmualkan.medium.com/"><i class="fab fa-medium" style="font-size: 2rem"></i></a>
+                            <a href="https://github.com/Durmus-Alkan"><i class="fab fa-github" style="font-size: 2rem"></i></a>
+                            <a href="https://www.linkedin.com/in/durmus-alkan-1145b816b/"><i class="fab fa-linkedin" style="font-size: 2rem"></i></a>
+                        </div>
+                    </div>
+                    <div id="contant">
+                        <h4>Daha Fazla</h4>
+                        <p>Mail:</p><a href="mailto:durmusalkan14@gmail.com">durmusalkan14@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            $( function() {
+              var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+              ];
+              $( ".tags" ).autocomplete({
+                source: availableTags
+              });
+            } );
+            </script>
+</body>
+</html>

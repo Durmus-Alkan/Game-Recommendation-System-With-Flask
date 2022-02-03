@@ -1,0 +1,117 @@
+*,body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav{
+           width: 100%;
+           height: 6rem;
+           background-color: #F2F2F2;
+            display: flex;
+        }
+        nav div{
+            margin: 1.5rem auto;
+
+        }
+        nav div p{
+            font-size: 2rem;
+            color: #676669;
+            font-family: 'Gowun Batang', serif;
+        }
+
+        .container{
+
+            padding: 1rem 10rem;
+            width: 100%;
+        }
+
+
+        #values p,h1{
+            margin: 10px;
+            text-align: center;
+            width: 100%;
+            font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        }
+        form{
+            text-align: center;
+        }
+        form input{
+            width: 30%;
+            margin: 10px;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 10px;
+            box-shadow: 2px 2px white;
+
+        }
+         input:focus{
+             outline: none;
+             border: 1px solid orange;
+             box-shadow: 2px 2px orange;
+         }
+                @media screen and (max-width: 1000px){
+            form input{
+                width: 100%;
+            }
+            .hidden-text{
+                width: 100%;
+            }
+        }
+
+        .hidden-text{
+            display: none;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .input-button{
+            width: 170px;
+            color: white;
+        }
+        input[type=submit]{
+            background-color: orange;
+        }
+        input[type=reset]{
+            background-color: #a41515;
+            box-shadow: 2px 2px white;
+            border: 1px solid white;
+        }
+        input[type=submit]:hover, input[type=reset]:hover{
+            cursor: pointer;
+        }
+        input[type=submit]:active {
+            box-shadow: 2px 2px orange;
+            border: 1px solid orange;
+        }
+
+        input[type=reset]:active {
+            box-shadow: 2px 2px #a41515;
+            border: 1px solid #a41515;
+        }
+
+        footer {
+            background-color: #F2F2F2;
+            width: 100%;
+            height: 100px
+
+        }
+        footer .container div div{
+            float: left;
+            width: 30%;
+            margin-left: 10px;
+            height: 20px;
+        }
+        #social-media div{
+            margin-left: 0px;
+        }
+        #social-media div a{
+            text-decoration: none;
+            color: black;
+            margin-right: 3px;
+        }
+        #social-media{
+            margin-left: 10px;
+        }
